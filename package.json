@@ -1,0 +1,25 @@
+{
+  "name": "graphql-playwright",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "APITest": "npx playwright test --reporter=list,allure-playwright",
+    "GenerateAllureReport": "allure generate ./allure-results -o allure-report --clean",
+    "OpenAllureReport": "allure open allure-report",
+    "test": "npx playwright test --reporter=list,allure-playwright && allure generate ./allure-results -o allure-report --clean && allure open allure-report",
+    "test2": "npx playwright test && allure generate allure-results -o allure-report --clean && allure open allure-report"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.40.1",
+    "@types/node": "^20.10.5",
+    "allure-playwright": "^2.10.0"
+  },
+  "dependencies": {
+    "axios": "^1.6.2",
+    "winston": "^3.11.0"
+  }
+}
